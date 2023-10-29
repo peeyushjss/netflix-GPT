@@ -73,6 +73,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 - Create React App
 - Configured Tailwind CSS
+- Header
+- Login Form
+- Sign Up Form
 
 
 # Features
@@ -89,3 +92,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Neflix GPT
     - Search Bar
     - Movie Suggestions
+
+
+- rafce for create functional component
