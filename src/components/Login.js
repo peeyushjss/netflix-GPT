@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState } from 'react';
 import Header from './Header';
 import { checkValidData } from '../utils/validate';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
@@ -8,17 +8,15 @@ import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
 import { USER_AVATAR } from '../utils/constants';
 
-
 const Login = () => {
+  const navigate = useNavigate(),
+    dispatch = useDispatch(),
+    [isSignInForm, setIsSignInForm] = useState(true),
+    [errormessage, setErrorMessage] = useState(null);
 
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const [isSignInForm, setIsSignInForm] = useState(true);
-  const [errormessage, setErrorMessage] = useState(null);
-
-  const fullName = useRef(null);
-  const email = useRef(null);
-  const password = useRef(null);
+  const fullName = useRef(null),
+    email = useRef(null),
+    password = useRef(null);
 
   const toggleSignInForm = () => {
     setIsSignInForm(!isSignInForm);
@@ -64,7 +62,6 @@ const Login = () => {
           setErrorMessage(errorCode + '-' + errorMessage);
         });
     }
-
   };
 
   return (

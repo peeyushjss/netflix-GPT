@@ -88,10 +88,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
         - Trailer in Background
         - Title & Description
         - Movie Suggestions
-            - Movie Lists
+            - Movie Lists * N
 - Neflix GPT
     - Search Bar
     - Movie Suggestions
 
 
 - rafce for create functional component
+
+- to install tailwind
+    - npm install -D tailwindcss
+    - npx tailwindcss init
+    - need to update tailwind.config.ts from tailwind website
+    - need to update index.css from tailwind website

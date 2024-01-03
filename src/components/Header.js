@@ -7,10 +7,9 @@ import { addUser, removeUser } from '../utils/userSlice';
 import { LOGO } from '../utils/constants';
 
 const Header = () => {
-
   const navigate = useNavigate();
-  const user = useSelector((store) => store.user);
   const dispatch = useDispatch();
+  const user = useSelector((store) => store.user);
 
   useEffect(() => {
     const unsubsribe = onAuthStateChanged(auth, (user) => {
@@ -23,7 +22,6 @@ const Header = () => {
         navigate('/');
       }
     });
-
     // unsubsribe when component unmounts
     return () => unsubsribe();
   }, []);
@@ -35,6 +33,7 @@ const Header = () => {
       navigate('/error');
     });
   }
+
   return (
     <div className='absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between'>
       <img className='w-44' src={LOGO} alt='logo' />
