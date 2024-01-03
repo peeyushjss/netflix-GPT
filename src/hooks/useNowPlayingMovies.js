@@ -19,5 +19,3 @@ const useNowPlayingMovies = () => {
 }
 
 export default useNowPlayingMovies;
-
-// video - 1.18.38
